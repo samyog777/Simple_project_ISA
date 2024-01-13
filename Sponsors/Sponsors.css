@@ -1,0 +1,137 @@
+* {
+background: rgb(109, 151, 115);
+margin-left: 0%;
+margin-top: 0%;
+font-style: normal;
+}
+
+.letter {
+float: right;
+margin-top: -550px;
+margin-right: 150px;
+}
+
+.letter h1 {
+font-size: 75px;
+color: white;
+}
+
+.letter p {
+color: white;
+font-size: 20px;
+line-height: 35px;
+}
+
+/* Rest of the previous CSS code */
+nav {
+position: fixed;
+top: 0;
+left: 0;
+background-color: #333;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+z-index: 999;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+margin: 0;
+padding: 0;
+}
+
+nav li {
+margin: 0 15px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+padding: 10px;
+transition: background-color 0.2s ease-in-out;
+border-radius: 5px;
+}
+
+nav a:hover {
+background-color: #555;
+}
+
+nav a.active {
+background-color: #fff;
+color: #333;
+font-weight: bold;
+}
+
+nav a.active:hover {
+background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+nav {
+    height: 70px;
+}
+
+nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#menu:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu:checked ~ ul li {
+    margin: 10px 0;
+}
+
+#menu:checked ~ .menu-icon .icon-bar {
+    background-color: #fff;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.icon-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.icon-bar:nth-child(2) {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+}
